@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html >
+  <head>
+    <link rel="stylesheet" href="styles/gapp.css">
+  <title>Memo maker</title>
+  <script src="js/angular.min.js"></script>
+
+  </head>
+  <body ng-app="bullgenApp" ng-controller="bullController">
+    <div>
+    <button class="tabbed" ng-click="makeReport()">Create</button>
+    <button class="tabbed" ng-click="showNouns()">Statements</button>
+   <br>
+    <span id="thyGoals">
+    <ul>
+      <h3 class="user">{{userInfo}}</h3>
+      <p class="user">{{userAddress}}</p>
+      <p  class="user">{{userPhone}} </p>
+      <p  class="user">{{atTime}}</p>
+
+      <li ng-repeat="goal in mygoals">
+        <p class="projectHeader">{{goal.name}} </p>
+        <p class="projectItems"> {{goal.items}}</p> 
+        
+      </li>
+    </ul>
+    </span>
+    </div>
+   
+    <script src="./js/bullgen.js"></script>
+    <script src="./js/angular-local-storage.min.js"></script>
+    
+    
+  </body>
+</html>
